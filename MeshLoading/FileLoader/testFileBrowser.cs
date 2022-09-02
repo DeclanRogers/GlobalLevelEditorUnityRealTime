@@ -24,29 +24,41 @@ public class testFileBrowser : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        print(1);
         MTLLoader mtl = new MTLLoader();
+        print(2);
         //setup file browser style
         // fb.guiSkin = skins[0]; //set the starting skin
         //set the various textures
         fb.fileTexture = mtl.TextureLoadFunction(@"Images\file.png", false);
-        Debug.Log(fb.fileTexture.width);
+        print(3);
+        //Debug.Log(fb.fileTexture.width);
+        print(4);
         fb.directoryTexture = mtl.TextureLoadFunction(@"Images\folder.png", false); ;
+        print(5);
         fb.backTexture = mtl.TextureLoadFunction(@"Images\back.png", false); ;
+        print(6);
         fb.driveTexture = mtl.TextureLoadFunction(@"Images\drive.png", false); ;
+        print(7);
         //show the search bar
         fb.showSearch = true;
+        print(8);
         //search recursively (setting recursive search may cause a long delay)
         fb.searchRecursively = true;
+        print(9);
         // player = FindObjectOfType<PlayerController>();
         ml = FindObjectOfType<Meshes>();
+        print(10);
 
 
         levelName = "CustomLevel";
+        print(11);
 
 
         string line;
         string[] linesplit;
         string[] linesplitV3;
+        print(12);
         // using (outputFile = new StreamReader(@"CustomLevel\test.txt"))
 
 
@@ -54,6 +66,7 @@ public class testFileBrowser : MonoBehaviour
 
         line = outputFile.ReadLine();
 
+        print(13);
         while (line != null)
         {
             linesplit = line.Split(':');
@@ -87,8 +100,10 @@ public class testFileBrowser : MonoBehaviour
         }
 
 
+        print(14);
 
         outputFile.Close();
+        print(15);
 
 
     }
@@ -205,7 +220,7 @@ public class testFileBrowser : MonoBehaviour
         StreamReader outputFile = new StreamReader(@"CustomLevel\test2.txt");
 
         line = outputFile.ReadLine();
-
+        
         while (line != null)
         {
             linesplit = line.Split(':');
@@ -231,7 +246,7 @@ public class testFileBrowser : MonoBehaviour
 
         outputFile.Close();
 
-
+        print("P1");
 
 
          outputFile = new StreamReader(@"CustomLevel\test.txt");

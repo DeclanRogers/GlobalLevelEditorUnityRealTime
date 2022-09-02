@@ -67,10 +67,12 @@ namespace MeshLoading
             //}
 
             testFileBrowser tfb = fb.GetComponent<testFileBrowser>();
-
+            //player = FindObjectOfType<PlayerController>().gameObject;
         }
 
         bool value = false;
+        bool value1 = true;
+
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.N))
@@ -81,7 +83,18 @@ namespace MeshLoading
                 testFileBrowser tfb = fb.GetComponent<testFileBrowser>();
             }
 
-
+            //if (Input.GetKeyDown(KeyCode.F12) || Input.GetKeyDown(KeyCode.Alpha9))
+            //{
+            //    if ((player.GetComponent<PlayerController>().lookSpeed == 0.0f))
+            //    {
+            //        player.GetComponent<PlayerController>().lookSpeed = 2.0f;
+            //        
+            //    }
+            //    else if (!(player.GetComponent<PlayerController>().lookSpeed == 0.0f))
+            //    player.GetComponent<PlayerController>().lookSpeed = 0.0f;
+            //
+            //
+            //}
 
 
 
